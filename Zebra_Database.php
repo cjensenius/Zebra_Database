@@ -4878,6 +4878,7 @@ class Zebra_Database {
 
             // log error to the system logger
             error_log('Zebra_Database (MySQL): ' . (isset($data['error']) ? $data['error'] : $data['message']) . print_r(' in ' . $backtraceInfo[1]['file'] . ' on line ' . $backtraceInfo[1]['line'], true));
+            trigger_error('Zebra_Database (MySQL): ' . (isset($data['error']) ? $data['error'] : $data['message']) . print_r(' in ' . $backtraceInfo[1]['file'] . ' on line ' . $backtraceInfo[1]['line'], true));
 
         }
 
